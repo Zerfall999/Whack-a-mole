@@ -196,7 +196,7 @@ def how():
 # MUSIC!!!!
 pygame.mixer.init()
 background_music = pygame.mixer.Sound("background_music.mp3")
-squirell_sound = pygame.mixer.Sound("squirell sound.mp3")
+squirell_sound = pygame.mixer.Sound("squirell_sound.mp3")
 new_highscore = pygame.mixer.Sound("new_highscore.mp3")
 victory = pygame.mixer.Sound("victoryy.mp3")
 
