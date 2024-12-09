@@ -158,7 +158,7 @@ def whac_a_mole():
         kailesurugarne.configure(text="New High Score!!!")
         sleep(5)
         kailesurugarne.place_forget()
-    elif score == 1000:
+    elif score == 700:
         victory.play()
         background_music.stop()
         highscore = score
