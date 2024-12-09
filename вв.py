@@ -41,27 +41,25 @@ def start():
     t = threading.Thread(target=whac_a_mole)
     t.start()
 
-
-# when a rat is hit aka whacked, this def will run
 def onwhack():
     global hole
     global score
     if hole == 1:
-        trigger_rat1.configure(state='disabled', image=bonked)
+        trigger_sqrl1.configure(state='disabled', image=bonked)
     elif hole == 2:
-        trigger_rat2.configure(state='disabled', image=bonked)
+        trigger_sqrl2.configure(state='disabled', image=bonked)
     elif hole == 3:
-        trigger_rat3.configure(state='disabled', image=bonked)
+        trigger_sqrl3.configure(state='disabled', image=bonked)
     elif hole == 4:
-        trigger_rat4.configure(state='disabled', image=bonked)
+        trigger_sqrl4.configure(state='disabled', image=bonked)
     elif hole == 5:
-        trigger_rat5.configure(state='disabled', image=bonked)
+        trigger_sqrl5.configure(state='disabled', image=bonked)
     elif hole == 6:
-        trigger_rat6.configure(state='disabled', image=bonked)
+        trigger_sqrl6.configure(state='disabled', image=bonked)
     elif hole == 7:
-        trigger_rat7.configure(state='disabled', image=bonked)
+        trigger_sqrl7.configure(state='disabled', image=bonked)
     elif hole == 8:
-        trigger_rat8.configure(state='disabled', image=bonked)
+        trigger_sqrl8.configure(state='disabled', image=bonked)
 
     score += 10
     score_label.configure(text=f"Score:{score}")
@@ -81,76 +79,76 @@ def whac_a_mole():
         hole = random.randint(1, 8)
         if hole == 1:
             rat_sound.play()
-            trigger_rat1.configure(
+            trigger_sqrl1.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat1.place(x=220, y=255)
+                image=squirell, )
+            trigger_sqrl1.place(x=220, y=255)
             sleep(0.75)
-            trigger_rat1.configure(state='disabled', )
-            trigger_rat1.place_forget()
+            trigger_sqrl1.configure(state='disabled', )
+            trigger_sqrl1.place_forget()
         elif hole == 2:
             rat_sound.play()
-            trigger_rat2.configure(
+            trigger_sqrl2.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat2.place(x=620, y=260)
+                image=squirell, )
+            trigger_sqrl2.place(x=620, y=260)
             sleep(0.75)
-            trigger_rat2.configure(state='disabled', text='', )
-            trigger_rat2.place_forget()
+            trigger_sqrl2.configure(state='disabled', text='', )
+            trigger_sqrl2.place_forget()
         elif hole == 3:
             rat_sound.play()
-            trigger_rat3.configure(
+            trigger_sqrl3.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat3.place(x=1000, y=255)
+                image=squirell, )
+            trigger_sqrl3.place(x=1000, y=255)
             sleep(0.75)
-            trigger_rat3.configure(state='disabled', text='', )
-            trigger_rat3.place_forget()
+            trigger_sqrl3.configure(state='disabled', text='', )
+            trigger_sqrl3.place_forget()
         elif hole == 4:
             rat_sound.play()
-            trigger_rat4.configure(
+            trigger_sqrl4.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat4.place(x=400, y=400)
+                image=squirell, )
+            trigger_sqrl4.place(x=400, y=400)
             sleep(0.75)
-            trigger_rat4.configure(state='disabled', text='', )
-            trigger_rat4.place_forget()
+            trigger_sqrl4.configure(state='disabled', text='', )
+            trigger_sqrl4.place_forget()
         elif hole == 5:
             rat_sound.play()
-            trigger_rat5.configure(
+            trigger_sqrl5.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat5.place(x=790, y=400)
+                image=squirell, )
+            trigger_sqrl5.place(x=790, y=400)
             sleep(0.75)
-            trigger_rat5.configure(state='disabled', text='', )
-            trigger_rat5.place_forget()
+            trigger_sqrl5.configure(state='disabled', text='', )
+            trigger_sqrl5.place_forget()
         elif hole == 6:
             rat_sound.play()
-            trigger_rat6.configure(
+            trigger_sqrl6.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat6.place(x=210, y=530)
+                image=squirell, )
+            trigger_sqrl6.place(x=210, y=530)
             sleep(0.75)
-            trigger_rat6.configure(state='disabled', text='', )
-            trigger_rat6.place_forget()
+            trigger_sqrl6.configure(state='disabled', text='', )
+            trigger_sqrl6.place_forget()
         elif hole == 7:
             rat_sound.play()
-            trigger_rat7.configure(
+            trigger_sqrl7.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat7.place(x=600, y=530)
+                image=squirell, )
+            trigger_sqrl7.place(x=600, y=530)
             sleep(0.75)
-            trigger_rat7.configure(state='disabled', text='', )
-            trigger_rat7.place_forget()
+            trigger_sqrl7.configure(state='disabled', text='', )
+            trigger_sqrl7.place_forget()
         elif hole == 8:
             rat_sound.play()
-            trigger_rat8.configure(
+            trigger_sqrl8.configure(
                 state='normal',
-                image=rat, )
-            trigger_rat8.place(x=1000, y=520)
+                image=squirell, )
+            trigger_sqrl8.place(x=1000, y=520)
             sleep(0.75)
-            trigger_rat8.configure(state='disabled', text='', )
-            trigger_rat8.place_forget()
+            trigger_sqrl8.configure(state='disabled', text='', )
+            trigger_sqrl8.place_forget()
     county.place_forget()
     if score > highscore and score != 1000:
         background_music.stop()
@@ -232,10 +230,10 @@ highscore_dekhau.place(x=960, y=130)
 
 # Countdown !!!
 
-county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text=f"Rats Left:{countdown}")
+county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text=f"Squirells Left:{countdown}")
 
 # rat image
-rat = customtkinter.CTkImage(Image.open("rat on mud.png"), size=(160, 160))
+squirell = customtkinter.CTkImage(Image.open("squirell on mud.png"), size=(160, 160))
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
 # rat image when it is clicked aka. hit
@@ -291,8 +289,8 @@ menu = customtkinter.CTkLabel(master=Home_screen,
                               text=''
                               )
 # menu.place(relx =0.5,rely =0.5, anchor =CENTER)
-# rat1
-trigger_rat1 = customtkinter.CTkButton(master=Home_screen,
+# squirell1
+trigger_sqrl1 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -303,8 +301,8 @@ trigger_rat1 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat2
-trigger_rat2 = customtkinter.CTkButton(master=Home_screen,
+# squirell2
+trigger_sqrl2 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -315,8 +313,8 @@ trigger_rat2 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat3
-trigger_rat3 = customtkinter.CTkButton(master=Home_screen,
+# squirell3
+trigger_sqrl3 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -327,8 +325,8 @@ trigger_rat3 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat4
-trigger_rat4 = customtkinter.CTkButton(master=Home_screen,
+# squirell4
+trigger_sqrl4 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -339,8 +337,8 @@ trigger_rat4 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat5
-trigger_rat5 = customtkinter.CTkButton(master=Home_screen,
+# squirell5
+trigger_sqrl5 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -351,8 +349,8 @@ trigger_rat5 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat6
-trigger_rat6 = customtkinter.CTkButton(master=Home_screen,
+# squirell6
+trigger_sqrl6 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -363,8 +361,8 @@ trigger_rat6 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat7
-trigger_rat7 = customtkinter.CTkButton(master=Home_screen,
+# squirell7
+trigger_sqrl7 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
@@ -375,8 +373,8 @@ trigger_rat7 = customtkinter.CTkButton(master=Home_screen,
                                        hover=False,
                                        )
 
-# rat8
-trigger_rat8 = customtkinter.CTkButton(master=Home_screen,
+# squirell8
+trigger_sqrl8 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
                                        state='disabled',
