@@ -66,17 +66,6 @@ def onwhack():
     score += 10
     score_label.configure(text=f"Score:{score}")
 
-
-# this is the function for when the golden rat is hit
-def goldwhack():
-    global hole
-    global score
-    trigger_ratG.configure(state='disabled', image=shiny_bonk)
-
-    score += 250
-    score_label.configure(text=f"Score:{score}")
-
-
 # this is the function for the game, this determines where the rats will spawn, and also when the game end
 def whac_a_mole():
     ready_set_whack()
@@ -90,151 +79,78 @@ def whac_a_mole():
         countdown -= 1
         county.configure(text=f"Rats Left:{countdown}")
         hole = random.randint(1, 8)
-        if i == 43:
-            if hole == 1:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal', )
-                trigger_ratG.place(x=220, y=255)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', )
-                trigger_ratG.place_forget()
-            elif hole == 2:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=620, y=260)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 3:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=1000, y=255)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 4:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=400, y=400)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 5:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=790, y=400)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 6:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=210, y=530)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 7:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=600, y=530)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-            elif hole == 8:
-                rat_sound.play()
-                trigger_ratG.configure(
-                    state='normal',
-                    image=ratG, )
-                trigger_ratG.place(x=1000, y=520)
-                sleep(0.5)
-                trigger_ratG.configure(state='disabled', text='', )
-                trigger_ratG.place_forget()
-        else:
-            if hole == 1:
-                rat_sound.play()
-                trigger_rat1.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat1.place(x=220, y=255)
-                sleep(0.75)
-                trigger_rat1.configure(state='disabled', )
-                trigger_rat1.place_forget()
-            elif hole == 2:
-                rat_sound.play()
-                trigger_rat2.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat2.place(x=620, y=260)
-                sleep(0.75)
-                trigger_rat2.configure(state='disabled', text='', )
-                trigger_rat2.place_forget()
-            elif hole == 3:
-                rat_sound.play()
-                trigger_rat3.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat3.place(x=1000, y=255)
-                sleep(0.75)
-                trigger_rat3.configure(state='disabled', text='', )
-                trigger_rat3.place_forget()
-            elif hole == 4:
-                rat_sound.play()
-                trigger_rat4.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat4.place(x=400, y=400)
-                sleep(0.75)
-                trigger_rat4.configure(state='disabled', text='', )
-                trigger_rat4.place_forget()
-            elif hole == 5:
-                rat_sound.play()
-                trigger_rat5.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat5.place(x=790, y=400)
-                sleep(0.75)
-                trigger_rat5.configure(state='disabled', text='', )
-                trigger_rat5.place_forget()
-            elif hole == 6:
-                rat_sound.play()
-                trigger_rat6.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat6.place(x=210, y=530)
-                sleep(0.75)
-                trigger_rat6.configure(state='disabled', text='', )
-                trigger_rat6.place_forget()
-            elif hole == 7:
-                rat_sound.play()
-                trigger_rat7.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat7.place(x=600, y=530)
-                sleep(0.75)
-                trigger_rat7.configure(state='disabled', text='', )
-                trigger_rat7.place_forget()
-            elif hole == 8:
-                rat_sound.play()
-                trigger_rat8.configure(
-                    state='normal',
-                    image=rat, )
-                trigger_rat8.place(x=1000, y=520)
-                sleep(0.75)
-                trigger_rat8.configure(state='disabled', text='', )
-                trigger_rat8.place_forget()
+        if hole == 1:
+            rat_sound.play()
+            trigger_rat1.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat1.place(x=220, y=255)
+            sleep(0.75)
+            trigger_rat1.configure(state='disabled', )
+            trigger_rat1.place_forget()
+        elif hole == 2:
+            rat_sound.play()
+            trigger_rat2.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat2.place(x=620, y=260)
+            sleep(0.75)
+            trigger_rat2.configure(state='disabled', text='', )
+            trigger_rat2.place_forget()
+        elif hole == 3:
+            rat_sound.play()
+            trigger_rat3.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat3.place(x=1000, y=255)
+            sleep(0.75)
+            trigger_rat3.configure(state='disabled', text='', )
+            trigger_rat3.place_forget()
+        elif hole == 4:
+            rat_sound.play()
+            trigger_rat4.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat4.place(x=400, y=400)
+            sleep(0.75)
+            trigger_rat4.configure(state='disabled', text='', )
+            trigger_rat4.place_forget()
+        elif hole == 5:
+            rat_sound.play()
+            trigger_rat5.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat5.place(x=790, y=400)
+            sleep(0.75)
+            trigger_rat5.configure(state='disabled', text='', )
+            trigger_rat5.place_forget()
+        elif hole == 6:
+            rat_sound.play()
+            trigger_rat6.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat6.place(x=210, y=530)
+            sleep(0.75)
+            trigger_rat6.configure(state='disabled', text='', )
+            trigger_rat6.place_forget()
+        elif hole == 7:
+            rat_sound.play()
+            trigger_rat7.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat7.place(x=600, y=530)
+            sleep(0.75)
+            trigger_rat7.configure(state='disabled', text='', )
+            trigger_rat7.place_forget()
+        elif hole == 8:
+            rat_sound.play()
+            trigger_rat8.configure(
+                state='normal',
+                image=rat, )
+            trigger_rat8.place(x=1000, y=520)
+            sleep(0.75)
+            trigger_rat8.configure(state='disabled', text='', )
+            trigger_rat8.place_forget()
     county.place_forget()
     if score > highscore and score != 1000:
         background_music.stop()
@@ -320,12 +236,10 @@ county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text
 
 # rat image
 rat = customtkinter.CTkImage(Image.open("rat on mud.png"), size=(160, 160))
-ratG = customtkinter.CTkImage(Image.open("shiny_rat.png"), size=(160, 160))
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
 # rat image when it is clicked aka. hit
 bonked = customtkinter.CTkImage(Image.open("rat.png"), size=(170, 160))
-shiny_bonk = customtkinter.CTkImage(Image.open("shiny_bonk.png"), size=(170, 160))
 
 # the "ready!" "set!" "go!" ko placeholder
 kailesurugarne = customtkinter.CTkLabel(text='',
@@ -464,20 +378,6 @@ trigger_rat7 = customtkinter.CTkButton(master=Home_screen,
 # rat8
 trigger_rat8 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
-                                       text='',
-                                       state='disabled',
-                                       fg_color='#21c65a',
-                                       height=10,
-                                       width=10,
-                                       corner_radius=0,
-                                       hover=False,
-                                       )
-
-# GOLDEN RAT!
-
-trigger_ratG = customtkinter.CTkButton(master=Home_screen,
-                                       image=ratG,
-                                       command=goldwhack,
                                        text='',
                                        state='disabled',
                                        fg_color='#21c65a',
