@@ -1,4 +1,3 @@
-
 from tkinter import *
 from PIL import Image
 import random
@@ -75,10 +74,10 @@ def whac_a_mole():
     global highscore
     for i in range(0, 76):
         countdown -= 1
-        county.configure(text=f"Squirells Left:{countdown}")
+        county.configure(text=f"Rats Left:{countdown}")
         hole = random.randint(1, 8)
         if hole == 1:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl1.configure(
                 state='normal',
                 image=squirell, )
@@ -87,7 +86,7 @@ def whac_a_mole():
             trigger_sqrl1.configure(state='disabled', )
             trigger_sqrl1.place_forget()
         elif hole == 2:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl2.configure(
                 state='normal',
                 image=squirell, )
@@ -96,7 +95,7 @@ def whac_a_mole():
             trigger_sqrl2.configure(state='disabled', text='', )
             trigger_sqrl2.place_forget()
         elif hole == 3:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl3.configure(
                 state='normal',
                 image=squirell, )
@@ -105,7 +104,7 @@ def whac_a_mole():
             trigger_sqrl3.configure(state='disabled', text='', )
             trigger_sqrl3.place_forget()
         elif hole == 4:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl4.configure(
                 state='normal',
                 image=squirell, )
@@ -114,7 +113,7 @@ def whac_a_mole():
             trigger_sqrl4.configure(state='disabled', text='', )
             trigger_sqrl4.place_forget()
         elif hole == 5:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl5.configure(
                 state='normal',
                 image=squirell, )
@@ -123,7 +122,7 @@ def whac_a_mole():
             trigger_sqrl5.configure(state='disabled', text='', )
             trigger_sqrl5.place_forget()
         elif hole == 6:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl6.configure(
                 state='normal',
                 image=squirell, )
@@ -132,7 +131,7 @@ def whac_a_mole():
             trigger_sqrl6.configure(state='disabled', text='', )
             trigger_sqrl6.place_forget()
         elif hole == 7:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl7.configure(
                 state='normal',
                 image=squirell, )
@@ -141,7 +140,7 @@ def whac_a_mole():
             trigger_sqrl7.configure(state='disabled', text='', )
             trigger_sqrl7.place_forget()
         elif hole == 8:
-            rat_sound.play()
+            squirell_sound.play()
             trigger_sqrl8.configure(
                 state='normal',
                 image=squirell, )
@@ -197,7 +196,7 @@ def how():
 # MUSIC!!!!
 pygame.mixer.init()
 background_music = pygame.mixer.Sound("background_music.mp3")
-rat_sound = pygame.mixer.Sound("rat_sound.mp3")
+squirell_sound = pygame.mixer.Sound("squirell sound.mp3")
 new_highscore = pygame.mixer.Sound("new_highscore.mp3")
 victory = pygame.mixer.Sound("victoryy.mp3")
 
@@ -237,7 +236,7 @@ squirell = customtkinter.CTkImage(Image.open("squirell on mud.png"), size=(160, 
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
 # rat image when it is clicked aka. hit
-bonked = customtkinter.CTkImage(Image.open("rat.png"), size=(170, 160))
+bonked = customtkinter.CTkImage(Image.open("squirell.png"), size=(170, 160))
 
 # the "ready!" "set!" "go!" ko placeholder
 kailesurugarne = customtkinter.CTkLabel(text='',
