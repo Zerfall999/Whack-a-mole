@@ -75,7 +75,7 @@ def whac_a_mole():
     global highscore
     for i in range(0, 76):
         countdown -= 1
-        county.configure(text=f"Rats Left:{countdown}")
+        county.configure(text=f"Squirells Left:{countdown}")
         hole = random.randint(1, 8)
         if hole == 1:
             rat_sound.play()
