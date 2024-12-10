@@ -232,11 +232,11 @@ highscore_dekhau.place(x=960, y=130)
 county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text=f"Squirells Left:{countdown}")
 
 # rat image
-squirell = customtkinter.CTkImage(Image.open("squirell.png"), size=(160, 160))
+squirell = customtkinter.CTkImage(Image.open("sqr.png"), size=(160, 160))
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
 # rat image when it is clicked aka. hit
-bonked = customtkinter.CTkImage(Image.open("squirell on mud.png"), size=(170, 160))
+bonked = customtkinter.CTkImage(Image.open("mud.png"), size=(170, 160))
 
 # the "ready!" "set!" "go!" ko placeholder
 kailesurugarne = customtkinter.CTkLabel(text='',
