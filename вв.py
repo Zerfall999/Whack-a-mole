@@ -63,7 +63,7 @@ def onwhack():
     score += 10
     score_label.configure(text=f"Score:{score}")
 
-# this is the function for the game, this determines where the rats will spawn, and also when the game end
+# this is the function for the game, this determines where the squirells will spawn, and also when the game end
 
 def whack_a_mole():
     ready_set_whack()
@@ -159,7 +159,6 @@ def how():
     playbtn.place(x=1250, y=700)
 
 
-# these are all just the buttons and labels that willl be used throughout the code.. aka variables ig?
 
 
 # MUSIC!!!!
@@ -200,11 +199,11 @@ highscore_dekhau.place(x=960, y=130)
 
 county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text=f"Squirrels Left:{countdown}")
 
-# rat image
+# squirell image
 squirell = customtkinter.CTkImage(Image.open("squirrel.png"), size=(170, 160))
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
-# rat image when it is clicked aka. hit
+# squirell image when it is clicked aka. hit
 bonked = customtkinter.CTkImage(Image.open("squirrel_on_mud.png"), size=(170, 160))
 
 # the "ready!" "set!" "go!" ko placeholder
