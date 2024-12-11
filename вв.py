@@ -19,11 +19,8 @@ highscore = 0
 countdown = 76
 
 app.geometry(f"{width}x{height}")
-# app.attributes('-fullscreen', True)
 app.title("Whack A Squ")
 
-
-# ALL THE FUNCTIONSSSSS
 
 
 # when start button pressed, this will happen, determines the points
@@ -159,9 +156,7 @@ def how():
     playbtn.place(x=1250, y=700)
 
 
-
-
-# MUSIC!!!!
+# MUSIC
 pygame.mixer.init()
 background_music = pygame.mixer.Sound("background_music.mp3")
 squirell_sound = pygame.mixer.Sound("squirell sound.mp3")
@@ -199,11 +194,11 @@ highscore_dekhau.place(x=960, y=130)
 
 county = customtkinter.CTkLabel(master=Home_screen, font=("PokemonGB", 30), text=f"Squirrels Left:{countdown}")
 
-# squirell image
+
 squirell = customtkinter.CTkImage(Image.open("squirrel.png"), size=(170, 160))
 howpic = customtkinter.CTkImage(Image.open("how.png"), size=(1000, 650))
 
-# squirell image when it is clicked aka. hit
+
 bonked = customtkinter.CTkImage(Image.open("squirrel_on_mud.png"), size=(170, 160))
 
 # the "ready!" "set!" "go!" ko placeholder
@@ -255,8 +250,8 @@ menu = customtkinter.CTkLabel(master=Home_screen,
                               image=howpic,
                               text=''
                               )
-# menu.place(relx =0.5,rely =0.5, anchor =CENTER)
-# squirell1
+
+
 trigger_sqrl1 = customtkinter.CTkButton(master=Home_screen,
                                        command=onwhack,
                                        text='',
